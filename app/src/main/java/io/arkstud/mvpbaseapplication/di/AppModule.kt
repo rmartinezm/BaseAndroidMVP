@@ -6,5 +6,6 @@ import io.arkstud.mvpbaseapplication.ui.splashScreen.SplashScreenPresenter
 import org.koin.dsl.module.module
 
 val appModule = module {
-    factory<SplashScreenContract.Presenter> { SplashScreenPresenter(SplashScreenInteractor()) }
+    factory<SplashScreenContract.Presenter> { SplashScreenPresenter(get()) }
+    factory<SplashScreenContract.Interactor> { SplashScreenInteractor() }
 }
